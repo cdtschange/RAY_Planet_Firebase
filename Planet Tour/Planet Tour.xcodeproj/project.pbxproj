@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2760176D1DD2BA1D00F503EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2760176C1DD2BA1D00F503EE /* GoogleService-Info.plist */; };
+		2760176F1DD2BF1D00F503EE /* RCValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2760176E1DD2BF1D00F503EE /* RCValues.swift */; };
 		495915E81D00F68300CDFD8B /* CrossfadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495915E71D00F68300CDFD8B /* CrossfadeSegue.swift */; };
 		496480691CF62CB100AB23CD /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496480681CF62CB100AB23CD /* ContainerViewController.swift */; };
 		4964806B1CF62D1C00AB23CD /* GetNewsletterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964806A1CF62D1C00AB23CD /* GetNewsletterViewController.swift */; };
@@ -29,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2760176C1DD2BA1D00F503EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2760176E1DD2BF1D00F503EE /* RCValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCValues.swift; sourceTree = "<group>"; };
+		276017701DD2CF3700F503EE /* Planet Tour.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Planet Tour.entitlements"; sourceTree = "<group>"; };
 		495915E71D00F68300CDFD8B /* CrossfadeSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossfadeSegue.swift; sourceTree = "<group>"; };
 		496480681CF62CB100AB23CD /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		4964806A1CF62D1C00AB23CD /* GetNewsletterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetNewsletterViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +90,7 @@
 		49923F1F1CF3C4320064A124 /* Planet Tour */ = {
 			isa = PBXGroup;
 			children = (
+				276017701DD2CF3700F503EE /* Planet Tour.entitlements */,
 				49C83E751CF8B41C00B80E52 /* ViewControllers */,
 				49C83E761CF8C00200B80E52 /* Views */,
 				49C83E6C1CF899FD00B80E52 /* Utilities */,
@@ -95,6 +101,7 @@
 				49C83E731CF8B29C00B80E52 /* Planets.xcassets */,
 				49923F291CF3C4320064A124 /* LaunchScreen.storyboard */,
 				49923F2C1CF3C4320064A124 /* Info.plist */,
+				2760176C1DD2BA1D00F503EE /* GoogleService-Info.plist */,
 			);
 			path = "Planet Tour";
 			sourceTree = "<group>";
@@ -115,6 +122,7 @@
 				49C83E6D1CF89A1F00B80E52 /* UIColorExtension.swift */,
 				495915E71D00F68300CDFD8B /* CrossfadeSegue.swift */,
 				49A83DD81D2E47000082ADA8 /* PlanetaryCollectionViewFlowLayout.swift */,
+				2760176E1DD2BF1D00F503EE /* RCValues.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -172,7 +180,13 @@
 				TargetAttributes = {
 					49923F1C1CF3C4310064A124 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = TE2BYM67AU;
 						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -204,6 +218,7 @@
 				49C83E741CF8B29C00B80E52 /* Planets.xcassets in Resources */,
 				49923F281CF3C4320064A124 /* Assets.xcassets in Resources */,
 				49923F261CF3C4320064A124 /* Main.storyboard in Resources */,
+				2760176D1DD2BA1D00F503EE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +240,7 @@
 				49923F381CF3C6720064A124 /* SolarSystem.swift in Sources */,
 				49923F4D1CF4E8710064A124 /* PlanetDetailViewController.swift in Sources */,
 				499C8A281D122C0E00742186 /* MiniMap.swift in Sources */,
+				2760176F1DD2BF1D00F503EE /* RCValues.swift in Sources */,
 				49923F211CF3C4320064A124 /* AppDelegate.swift in Sources */,
 				495915E81D00F68300CDFD8B /* CrossfadeSegue.swift in Sources */,
 				49C83E721CF8A51700B80E52 /* AppConstants.swift in Sources */,
@@ -340,10 +356,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Planet Tour/Planet Tour.entitlements";
+				DEVELOPMENT_TEAM = TE2BYM67AU;
 				INFOPLIST_FILE = "Planet Tour/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.Planet-Tour";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cdts.Planet-Tour";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -353,10 +371,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Planet Tour/Planet Tour.entitlements";
+				DEVELOPMENT_TEAM = TE2BYM67AU;
 				INFOPLIST_FILE = "Planet Tour/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.Planet-Tour";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cdts.Planet-Tour";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;

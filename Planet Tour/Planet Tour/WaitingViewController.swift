@@ -28,10 +28,22 @@ class WaitingViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let delayTime = DispatchTime.now() + 1.0
-    DispatchQueue.main.asyncAfter(deadline: delayTime) {
-      self.performSegue(withIdentifier: "loadingDoneSegue", sender: self)
+//    let delayTime = DispatchTime.now() + 1.0
+//    DispatchQueue.main.asyncAfter(deadline: delayTime) {
+//      self.performSegue(withIdentifier: "loadingDoneSegue", sender: self)
+//    }
+    
+    
+    if RCValues.sharedInstance.fetchComplete {
+      startAppForReal()
     }
+    
+    RCValues.sharedInstance.loadingDoneCallback = startAppForReal
+    
     // Do any additional setup after loading the view.
+  }
+  
+  func startAppForReal() {
+    performSegue(withIdentifier: "loadingDoneSegue", sender: self)
   }
 }

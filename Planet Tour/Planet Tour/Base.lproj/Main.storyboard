@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ksm-iv-QfK">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ksm-iv-QfK">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -13,7 +13,7 @@
         <scene sceneID="VEZ-0C-mXd">
             <objects>
                 <collectionViewController automaticallyAdjustsScrollViewInsets="NO" id="6bv-LL-yH0" customClass="PlanetsCollectionViewController" customModule="Planet_Tour" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" id="0em-Xy-n8G">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" id="0em-Xy-n8G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pbu-79-LSu" customClass="PlanetaryCollectionViewFlowLayout" customModule="Planet_Tour" customModuleProvider="target">
@@ -24,7 +24,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlanetCell" id="70i-bT-mcS" customClass="PlanetCell" customModule="Planet_Tour" customModuleProvider="target">
-                                <frame key="frameInset" minX="100" width="250" height="319"/>
+                                <rect key="frame" x="100" y="0.0" width="250" height="319"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="319"/>
@@ -80,7 +80,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qgN-UZ-QSY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xQH-Jf-lsy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just a moment..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZ4-On-D6v">
@@ -434,7 +434,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="aU9-RF-ZPZ" kind="relationship" relationship="rootViewController" id="2kl-zs-VcA"/>
+                        <segue destination="0qg-3P-oEj" kind="relationship" relationship="rootViewController" id="ANJ-v9-iBA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQR-8m-Nmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -446,7 +446,4 @@
         <image name="Mars" width="200" height="200"/>
         <image name="image-planets" width="375" height="236"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="KaX-Ep-SRd"/>
-    </inferredMetricsTieBreakers>
 </document>
