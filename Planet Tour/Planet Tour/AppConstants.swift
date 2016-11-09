@@ -24,16 +24,16 @@ import UIKit
 
 struct AppConstants {
 
-  static let bigLabelColor = UIColor(rgba: "#FFFFFF66")
+  static var bigLabelColor: UIColor { return RCValues.sharedInstance.color(forKey: .bigLabelColor) }
   static var appPrimaryColor: UIColor { return RCValues.sharedInstance.color(forKey: .appPrimaryColor) }
-  static let navBarBackground = UIColor(rgba: "#535E66")
-  static let navTintColor = UIColor(rgba: "#FBB03B")
-  static let detailTitleColor = UIColor(rgba: "#FFFFFF")
-  static let detailInfoColor = UIColor(rgba: "#CCCCCC")
-  static let subscribeBannerText = "Like Planet Tour?"
-  static let subscribeBannerButton = "Get our newsletter!"
-  static let subscribeVCText = "Want more astronomy facts? Sign up for our newsletter!"
-  static let subscribeVCButton = "Subscribe"
-  static let shouldWeIncludePluto = false
-  static let planetImageScaleFactor = 0.33
+  static var navBarBackground: UIColor { return RCValues.sharedInstance.color(forKey: .navBarBackground) }
+  static var navTintColor: UIColor { return RCValues.sharedInstance.color(forKey: .navTintColor) }
+  static var detailTitleColor: UIColor { return RCValues.sharedInstance.color(forKey: .detailTitleColor) }
+  static var detailInfoColor: UIColor { return RCValues.sharedInstance.color(forKey: .detailInfoColor) }
+  static var subscribeBannerText: String { return RCValues.sharedInstance.string(forKey: .subscribeBannerText) }
+  static var subscribeBannerButton: String { return RCValues.sharedInstance.string(forKey: .subscribeBannerButton) }
+  static var subscribeVCText: String { return RCValues.sharedInstance.string(forKey: .subscribeVCText) }
+  static var subscribeVCButton: String { return RCValues.sharedInstance.string(forKey: .subscribeVCButton) }
+  static var shouldWeIncludePluto: Bool { return RCValues.sharedInstance.bool(forKey: .shouldWeIncludePluto) }
+  static var planetImageScaleFactor: Double { return RCValues.sharedInstance.double(forKey: .planetImageScaleFactor) }
 }
